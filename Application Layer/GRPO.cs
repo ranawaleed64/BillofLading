@@ -220,13 +220,14 @@ internal class GRPO
                     ((SAPbouiCOM.EditText)oMatrix.Columns.Item("1").Cells.Item(row).Specific).Value = dt[introw].ItemCode;
                     ((SAPbouiCOM.EditText)oMatrix.Columns.Item("11").Cells.Item(row).Specific).Value = Convert.ToString(dt[introw].Qty);
                     ((SAPbouiCOM.EditText)oMatrix.Columns.Item("U_BLNUM").Cells.Item(row).Specific).Value = Convert.ToString(dt[introw].BLNo);
-                    
-                    string containers = string.Join(",", dt[introw].containerNo);
+                    ((SAPbouiCOM.EditText)oMatrix.Columns.Item("14").Cells.Item(row).Specific).Value = Convert.ToString(dt[introw].UnitPrice);
+                    ((SAPbouiCOM.EditText)oMatrix.Columns.Item("163").Cells.Item(row).Specific).Value = Convert.ToString(dt[introw].containerNo);
+                    //string containers = string.Join(",", dt[introw].containerNo);
 
-                    ((SAPbouiCOM.EditText)oMatrix.Columns.Item("163").Cells.Item(row).Specific).Value = containers;
-                    
-                    
-                    
+                    //((SAPbouiCOM.EditText)oMatrix.Columns.Item("163").Cells.Item(row).Specific).Value = containers;
+
+
+
                     row = row + 1;
                 }
                 aForm.Freeze(false);

@@ -42,6 +42,9 @@ namespace BillOfLading
         public string ItemCode { get; set; }
         public double Qty { get; set; }
         public string BLNo { get; set; }
-       public List<string> containerNo { get; set; }
+        public string Warehouse { get; set; }
+        public double UnitPrice { get; set; }
+       //public List<string> containerNo { get; set; }
+       public string containerNo { get; set; }
     }
 }
